@@ -15,7 +15,7 @@
         android:padding="20dp"
         android:orientation="vertical">
 
-        <com.idean.highlightedlabel.HighlightedLabel
+        <com.idean.highlighterview.HighlighterView
                 android:id="@+id/titleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

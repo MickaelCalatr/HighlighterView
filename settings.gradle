@@ -1,1 +1,1 @@
-include ':app' , ':highlightedlabel'
+include ':app' , ':highlighterview'
