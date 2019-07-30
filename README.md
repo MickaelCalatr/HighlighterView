@@ -1,4 +1,5 @@
-# TODO NAME
+# Stranger TextView
+[ ![Download](https://api.bintray.com/packages/calatr/StrangerTextView/strangertextview/images/download.svg?version=1.0) ](https://bintray.com/calatr/StrangerTextView/strangertextview/1.0/link)
 
 This is a simple textView kotlin library for android API 15+. This library can highlight a word or an entire textView.
 
@@ -12,18 +13,20 @@ Using this library, you can add margin on the span on top, bottom, start and end
 Just and this line in your dependencies project.
 ```gradle
 dependencies {
-  TODO
+  implementation 'com.antartic.strangertextview:strangertextview:1.0'
 }
 ```
 ## Usage
 You can create your own view in xml like this.
 
 ```xml
-  <com.idean.highlightedlabel.HighlightedLabel TODO
+<com.antartic.strangertextview.StrangerTextView
       android:id="@+id/titleTextView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_gravity="center"
       android:text="The gun is loaded when the glass is full"
+      android:textColor="#FFFFFF"
       app:animated="true"
       app:color="#1763C4"
       app:marginBottom="-5dp"
@@ -32,10 +35,10 @@ You can create your own view in xml like this.
       app:marginTop="15dp"/>
 ```
 
-TODO NAME extend from AppCompatTextView the you can use it like a normal TextView.
+StrangerTextView extend from AppCompatTextView the you can use it like a normal TextView.
 But you can add some kind of span in background like this:
 ```java
-Name titleTextView = (Name) findViewById(R.id.title_text_view)
+StrangerTextView titleTextView = (StrangerTextView) findViewById(R.id.title_text_view)
 
 titleTextView.spans = listOf(Pair(0, 5), Pair(10, 15))
 ```
