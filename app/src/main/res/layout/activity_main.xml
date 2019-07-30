@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00214C"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <com.idean.highlightedlabel.HighlightedLabel
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="The gun is loaded when the glass is full"
+                android:textColor="#fff"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="26sp"
+                android:gravity="center"
+                app:animated="true"
+                app:color="#1763C4"
+                app:marginBottom="-5dp"
+                app:marginEnd="-5dp"
+                app:marginStart="-5dp"
+                app:marginTop="15dp"/>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="RESET"/>
+
+</RelativeLayout>
