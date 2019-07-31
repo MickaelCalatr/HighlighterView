@@ -11,7 +11,13 @@ import android.view.MotionEvent
 import androidx.appcompat.widget.AppCompatTextView
 import com.antartic.strangertextview.utils.setAllParentsClip
 
+/**
+ * Interface used to handle the click callback for the click on rects.
+ */
 interface StrangerCallBack {
+    /**
+     * Is called when the rect is clicked, [rect] is the position of the item and [str] is the text inside
+     */
     fun onClickOnItem(rect: RectF, str: String)
 }
 
@@ -419,7 +425,7 @@ class StrangerTextView @JvmOverloads constructor(
     }
 
     /**
-     * Reset animation for for each squares
+     * Reset animation for each squares
      */
     private fun resetToInitialState() {
         this.squareList.forEach { it.resetAnim() }
