@@ -1,4 +1,7 @@
 # Stranger TextView
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/979f7befb83841e4b4c0d5a00d654a4c)](https://app.codacy.com/app/MickaelCalatr/StrangerTextView?utm_source=github.com&utm_medium=referral&utm_content=MickaelCalatr/StrangerTextView&utm_campaign=Badge_Grade_Dashboard)
+
 [ ![Download](https://api.bintray.com/packages/calatr/StrangerTextView/strangertextview/images/download.svg?version=1.0) ](https://bintray.com/calatr/StrangerTextView/strangertextview/1.0/link)
 
 This is a simple textView kotlin library for android API 15+. This library can highlight a word or an entire textView.
