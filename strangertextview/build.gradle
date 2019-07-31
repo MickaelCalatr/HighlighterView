@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'org.jetbrains.dokka'
 
 publish {
     def groupProjectID = 'com.antartic.strangertextview'
@@ -20,6 +21,17 @@ publish {
     desc = 'This is a simple textView kotlin library for android API 15+. This library can highlight a word or an entire textView.'
     website = 'https://github.com/MickaelCalatr/StrangerTextView'
 
+}
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/doc"
+    reportUndocumented = false
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = "javadoc"
+    outputDirectory = "$buildDir/doc"
 }
 
 android {
