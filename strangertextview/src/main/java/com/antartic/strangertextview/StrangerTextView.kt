@@ -71,13 +71,8 @@ class StrangerTextView @JvmOverloads constructor(
      */
     private val textInfo = mutableListOf<Segment>()
 
-    /**
-     * Boolean used to allow the onDraw() function to draw the spans.
-     */
+
     private var isReadyToDraw = false
-    /**
-     * Boolean used to know if the view has been already created.
-     */
     private var alreadyInstantiate = false
 
     /**
@@ -103,14 +98,13 @@ class StrangerTextView @JvmOverloads constructor(
 
     init {
         context.obtainStyledAttributes(attrs, R.styleable.StrangerTextView)?.apply {
-            this@StrangerTextView.isAnimated = getBoolean(R.styleable.StrangerTextView_animated, false)
-            this@StrangerTextView.marginStart = getDimension(R.styleable.StrangerTextView_marginStart, 0f).toInt()
-            this@StrangerTextView.marginEnd = getDimension(R.styleable.StrangerTextView_marginEnd, 0f).toInt()
-            this@StrangerTextView.marginTop = getDimension(R.styleable.StrangerTextView_marginTop, 0f).toInt()
-            this@StrangerTextView.marginBottom = getDimension(R.styleable.StrangerTextView_marginBottom, 0f).toInt()
-            this@StrangerTextView.color = getColor(R.styleable.StrangerTextView_color, color)
-            this@StrangerTextView.animationDuration =
-                getInteger(R.styleable.StrangerTextView_animationDuration, 500).toLong()
+            isAnimated = getBoolean(R.styleable.StrangerTextView_animated, false)
+            marginStart = getDimension(R.styleable.StrangerTextView_marginStart, 0f).toInt()
+            marginEnd = getDimension(R.styleable.StrangerTextView_marginEnd, 0f).toInt()
+            marginTop = getDimension(R.styleable.StrangerTextView_marginTop, 0f).toInt()
+            marginBottom = getDimension(R.styleable.StrangerTextView_marginBottom, 0f).toInt()
+            color = getColor(R.styleable.StrangerTextView_color, color)
+            animationDuration = getInteger(R.styleable.StrangerTextView_animationDuration, 500).toLong()
             recycle()
         }
         post {
@@ -407,7 +401,7 @@ class StrangerTextView @JvmOverloads constructor(
 
             animator.duration = this.animationDuration
             animator.addUpdateListener {
-                val value = it.animatedValue as Float
+                val value = (it.animatedValue as? Float) ?: 0f
                 span.percent = value
                 invalidate()
             }
