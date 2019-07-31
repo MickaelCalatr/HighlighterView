@@ -11,6 +11,10 @@ import android.view.MotionEvent
 import androidx.appcompat.widget.AppCompatTextView
 import com.antartic.strangertextview.utils.setAllParentsClip
 
+interface StrangerCallBack {
+    fun onClickOnItem(rect: RectF, str: String)
+}
+
 class StrangerTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -75,7 +79,7 @@ class StrangerTextView @JvmOverloads constructor(
      * RecF     is the RectF of the square, it contains the position and the dimension.
      * String   this is the text in the rect
      */
-    var callBack: ((RectF, String) -> Unit)? = null
+    var callBack: StrangerCallBack? = null
 
     /**
      * This is the list of Pair used to initialise all span for teh text.
@@ -172,7 +176,7 @@ class StrangerTextView @JvmOverloads constructor(
         if (event.action == MotionEvent.ACTION_DOWN) {
             this.squareList.forEach {
                 if (hasOnClickOnRect(it, event)) {
-                    this.callBack?.invoke(it, it.text)
+                    this.callBack?.onClickOnItem(it, it.text)
                     performClick()
                     return true
                 }
