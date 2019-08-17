@@ -21,7 +21,7 @@ interface StrangerCallBack {
     fun onClickOnItem(rect: RectF, str: String)
 }
 
-class StrangerTextView @JvmOverloads constructor(
+open class StrangerTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
