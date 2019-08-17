@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/979f7befb83841e4b4c0d5a00d654a4c)](https://app.codacy.com/app/MickaelCalatr/StrangerTextView?utm_source=github.com&utm_medium=referral&utm_content=MickaelCalatr/StrangerTextView&utm_campaign=Badge_Grade_Dashboard)
 
-[ ![Download](https://api.bintray.com/packages/calatr/StrangerTextView/strangertextview/images/download.svg?version=1.0) ](https://bintray.com/calatr/StrangerTextView/strangertextview/1.0/link)
+[ ![Download](https://api.bintray.com/packages/calatr/StrangerTextView/strangertextview/images/download.svg?version=1.1) ](https://bintray.com/calatr/StrangerTextView/strangertextview/1.1/link)
 
 This is a simple textView kotlin library for android API 15+. This library can highlight a word or an entire textView.
 
@@ -16,7 +16,7 @@ Using this library, you can add margin on the span on top, bottom, start and end
 Just and this line in your dependencies project.
 ```gradle
 dependencies {
-  implementation 'com.antartic.strangertextview:strangertextview:1.0'
+  implementation 'com.antartic.strangertextview:strangertextview:1.1'
 }
 ```
 ## Usage
