@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         val animationList = listOf<StrangerTextView>(titleTextView)
 
         titleTextView.spans = listOf(Pair(0, titleTextView.text.length))
-        titleTextView.callBack = { rect, str ->
-            showPopupWindow(titleTextView, rect, str)
-        }
+//        titleTextView.callBack = { rect, str ->
+//            showPopupWindow(titleTextView, rect, str)
+//        }
 
         animationList.forEach {
             it.startAnimation()
