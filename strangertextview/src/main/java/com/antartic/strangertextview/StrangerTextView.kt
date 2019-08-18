@@ -45,13 +45,13 @@ open class StrangerTextView @JvmOverloads constructor(
     )
 
     // Attributes
-    private var isAnimated: Boolean = false
-    private var marginStart: Int = 0
-    private var marginEnd: Int = 0
-    private var marginTop: Int = 0
-    private var marginBottom: Int = 0
-    private var animationDuration: Long = 500L
-    private var color: Int = Color.CYAN
+    protected var isAnimated: Boolean = false
+    protected var marginStart: Int = 0
+    protected var marginEnd: Int = 0
+    protected var marginTop: Int = 0
+    protected var marginBottom: Int = 0
+    protected var animationDuration: Long = 500L
+    protected var color: Int = Color.CYAN
 
     private var rect = RectF()
 
