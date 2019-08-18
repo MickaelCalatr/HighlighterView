@@ -79,12 +79,10 @@ In the xml definition, besides the property, you can set:
 
 ## Version
 
--   1.0 Initial release
-
+-   1.1.1 Open the class
+-   1.0   Initial release
 
 ## TODO
-
--   Adapt for java language.
 
 ## License
 
