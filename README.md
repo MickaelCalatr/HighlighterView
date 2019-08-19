@@ -79,7 +79,7 @@ In the xml definition, besides the property, you can set:
 
 ## Version
 
--   1.1.1 Open the class
+-   1.1.1 Open the class to extend
 -   1.0   Initial release
 
 ## TODO
